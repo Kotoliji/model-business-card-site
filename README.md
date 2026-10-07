@@ -1,6 +1,8 @@
-# Anastasia — Model Portfolio (Design Drafts)
+# Model Portfolio / Business Card Website — 4 Design Drafts
 
-A one-page model portfolio site, built as four independent visual directions to compare side by side before picking (or merging) one. **Nothing here is final** — photos, name usage, bio, measurements and contact details are all placeholders, clearly marked as such in the markup and on the pages themselves.
+A one-page "business card" portfolio website template for models — built as four independent visual directions to compare side by side before picking (or merging) one. Not tied to any real person: the demo content uses a placeholder name ("Anastasia") and stock photos so the layouts can be judged on their own, and the whole thing is meant to be re-skinned with real content for whoever actually uses it.
+
+**Nothing here is final** — photos, name, bio, measurements and contact details are all placeholders, clearly marked as such in the markup and on the pages themselves.
 
 Static HTML / CSS / vanilla JS. No build step, no framework, no backend, no dependencies to install. Every page runs by opening the `.html` file directly — double-click it, or open it in a browser — no local server required.
 
@@ -34,9 +36,9 @@ Each variant is fully self-contained (its own CSS, JS and `assets/` folder) — 
 
 ## What's real vs. placeholder
 
-- **Photos** are temporary stock photos (Unsplash — free license), stored locally in each variant's `assets/` folder rather than hotlinked, so the swap is just "replace the file, keep the name" (or update the `<img src="">` path). None of these are the real model.
-- **Name, bio, measurements, agency, contact email/Instagram, city names** (Variant D's Madrid/Barcelona/London) are all placeholder text, written to show where real content will go — not to be mistaken for real information.
-- Nothing is connected to a backend, a contact form handler, or any third-party service. Contact links are plain `mailto:` / `tel:` / profile links, not working forms — intentionally, so nothing *looks* functional that isn't.
+- **Photos** are temporary stock photos (Unsplash — free license), stored locally in each variant's `assets/` folder rather than hotlinked, so the swap is just "replace the file, keep the name" (or update the `<img src="">` path). These are stock images, not a real person.
+- **Name ("Anastasia" — a stand-in, not a real person), bio, measurements, agency, contact email/Instagram, city names** (Variant D's Madrid/Barcelona/London) are all placeholder text, written to show where real content will go.
+- Nothing is connected to a backend, a contact form handler, or any third-party service. Contact links are plain `mailto:` / profile links, not working forms — intentionally, so nothing *looks* functional that isn't.
 
 ## How to preview
 
