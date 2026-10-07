@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebrar — Portfolio drafts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Inter:wght@400;500&display=swap');
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#121212;color:#f4f2ee;font-family:'Inter',sans-serif;padding:2rem}
+  .wrap{max-width:1180px;width:100%;text-align:center}
+  h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.8rem,5vw,2.6rem);margin:0 0 .6rem}
+  p.lead{color:rgba(244,242,238,.65);max-width:58ch;margin:0 auto 3rem;line-height:1.6}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .card{
+    border:1px solid rgba(244,242,238,.16);padding:2.2rem 1.6rem;text-align:left;
+    text-decoration:none;color:inherit;transition:border-color .3s ease,background .3s ease;display:block;
+  }
+  .card:hover{border-color:rgba(244,242,238,.45);background:rgba(244,242,238,.04)}
+  .card .tag{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#a3824e}
+  .card h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.5rem;margin:.6rem 0 .8rem}
+  .card p{font-size:.92rem;line-height:1.6;color:rgba(244,242,238,.7);margin:0}
+  .card .open{display:inline-block;margin-top:1.2rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Ebrar — four directions</h1>
+    <p class="lead">Working draft, not a finished site. Photos and text are placeholders. Open all four, compare on desktop and on your phone, and tell me which one to develop further (or what to mix from each).</p>
+    <div class="cards">
+      <a class="card" href="variant-a-editorial/index.html">
+        <span class="tag">Variant A</span>
+        <h2>Editorial Agency</h2>
+        <p>Black &amp; white, bold uppercase type, agency comp-card data block, masonry portfolio grid. Minimal, exclusive, casting-ready.</p>
+        <span class="open">Open draft →</span>
+      </a>
+      <a class="card" href="variant-b-cinematic/index.html">
+        <span class="tag">Variant B</span>
+        <h2>Cinematic Story</h2>
+        <p>Warm cream &amp; rust palette, serif-italic voice, narrative work layout, personal "story" section. Softer, more personal brand feel.</p>
+        <span class="open">Open draft →</span>
+      </a>
+      <a class="card" href="variant-c-fieldnotes/index.html">
+        <span class="tag">Variant C</span>
+        <h2>Field Notes</h2>
+        <p>Dark brutalist-editorial zine. Portfolio split into location/mood chapters (Studio, Urban, Night, Archive) with an edge-to-edge asymmetric mosaic — no plain rectangles, angled crops, scroll-spy chapter index.</p>
+        <span class="open">Open draft →</span>
+      </a>
+      <a class="card" href="variant-d-departures/index.html">
+        <span class="tag">Variant D</span>
+        <h2>Departures</h2>
+        <p>Photos fan out on load, a dark editorial interlude, then a horizontal city carousel — Madrid (warm), Barcelona (scattered white polaroid frames), London (cool, thin-framed grid) — swipe or use the arrows.</p>
+        <span class="open">Open draft →</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

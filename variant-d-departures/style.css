@@ -1,0 +1,191 @@
+/* ===========================================================
+   EBRAR — Departures
+   Fan-out intro, dark interlude, horizontal city carousel
+   (Madrid / Barcelona / London), contact.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap');
+
+:root{
+  --ink:#121212;
+  --paper:#f6f4ef;
+  --line:rgba(246,244,239,.16);
+  --accent:#d98c4a;
+  --dur:.9s;
+  --ease:cubic-bezier(.16,.84,.3,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:'Jost',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'DM Serif Display',serif}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+
+/* ---------- loader ---------- */
+#loader{position:fixed;inset:0;background:var(--ink);z-index:999;display:flex;align-items:center;justify-content:center;transition:opacity .7s var(--ease),visibility .7s var(--ease)}
+#loader.done{opacity:0;visibility:hidden}
+#loader span{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.6rem;letter-spacing:.06em}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.5rem clamp(1.2rem,4vw,2.6rem);
+  mix-blend-mode:difference;color:#fff;
+}
+header .logo{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.3rem}
+nav.primary-nav{display:flex;gap:2rem}
+nav.primary-nav a{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;position:relative;padding-bottom:3px}
+nav.primary-nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:width .35s var(--ease)}
+nav.primary-nav a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+
+/* ---------- fan hero ---------- */
+.fan-hero{position:relative;height:100svh;min-height:600px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.fan-stage{position:relative;width:100%;height:60%;display:flex;align-items:center;justify-content:center}
+.fan-card{
+  position:absolute;width:clamp(120px,15vw,190px);aspect-ratio:3/4;overflow:hidden;
+  border-radius:3px;box-shadow:0 20px 50px rgba(0,0,0,.5);
+  transform:translate(58vw,5vw) rotate(14deg) scale(.86);opacity:0;
+  transition:transform 1.15s var(--ease),opacity .8s var(--ease);
+  transition-delay:var(--d,0s);
+}
+.fan-hero.fanned .fan-card{
+  transform:translate(var(--x,0),var(--y,0)) rotate(var(--r,0deg)) scale(1);
+  opacity:1;
+}
+.fan-text{position:relative;z-index:5;text-align:center;margin-top:2rem}
+.fan-title{font-family:'DM Serif Display',serif;font-size:clamp(3rem,9vw,6.5rem);line-height:1}
+.fan-sub{margin-top:.8rem;font-size:.95rem;color:rgba(246,244,239,.65);max-width:40ch;margin-inline:auto}
+.scroll-cue{position:absolute;left:50%;bottom:2rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.7}
+.scroll-cue .line{width:1px;height:40px;background:rgba(246,244,239,.5);position:relative;overflow:hidden}
+.scroll-cue .line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:#fff;animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{top:-100%}60%{top:100%}100%{top:100%}}
+.scroll-cue span{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase}
+
+/* ---------- interlude ---------- */
+.interlude{
+  position:relative;min-height:100vh;padding:clamp(5rem,10vw,7rem) clamp(1.2rem,4vw,2.6rem);
+  display:flex;flex-direction:column;gap:clamp(1.8rem,4vw,2.6rem);justify-content:center;
+  background:radial-gradient(ellipse at 30% 20%,#1c1c1c 0%,var(--ink) 65%);
+}
+.interlude-grid{display:flex;gap:clamp(.7rem,2vw,1.1rem);height:min(74vh,760px)}
+.interlude-left{display:flex;flex-direction:column;gap:clamp(.7rem,2vw,1.1rem);width:36%}
+.interlude-left .eye-shot{flex:0 0 26%;overflow:hidden;border-radius:2px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.interlude-left .tall-shot{flex:1;min-height:0;overflow:hidden;border-radius:2px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.interlude-right{flex:1;overflow:hidden;border-radius:2px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.interlude-note{max-width:50ch}
+.interlude-note p{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.5;color:rgba(246,244,239,.85)}
+
+/* ---------- cities carousel ---------- */
+.cities{position:relative;height:100svh;min-height:600px}
+.cities-track{
+  display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.cities-track::-webkit-scrollbar{display:none}
+.city{flex:0 0 100%;scroll-snap-align:start;position:relative;height:100%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.city-bg{position:absolute;inset:0;z-index:0}
+.city-bg img{width:100%;height:100%;object-fit:cover}
+.city-overlay{position:absolute;inset:0;z-index:1}
+.city-madrid .city-overlay{background:linear-gradient(185deg,rgba(25,13,6,.5) 0%,rgba(20,10,5,.72) 55%,rgba(16,8,4,.92) 100%)}
+.city-barcelona .city-overlay{background:linear-gradient(185deg,rgba(12,12,10,.45) 0%,rgba(10,10,9,.7) 55%,rgba(8,8,7,.92) 100%)}
+.city-london .city-overlay{background:linear-gradient(185deg,rgba(7,12,18,.55) 0%,rgba(7,11,16,.76) 55%,rgba(5,9,13,.94) 100%)}
+
+.city-head{position:relative;z-index:3;padding:0 clamp(1.2rem,4vw,3rem);margin-bottom:1.4rem}
+.city-head .idx{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+.city-head h2{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,6vw,4rem);margin-top:.3rem}
+.city-head p{margin-top:.5rem;max-width:42ch;font-size:.92rem;opacity:.8}
+
+/* scattered photo field — shared by all three cities, styled per city via frame-* */
+.scatter-field{position:relative;z-index:3;height:68%;padding:0 clamp(1rem,4vw,3rem)}
+.scatter-item{
+  position:absolute;transform:rotate(var(--r,0deg));
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+.scatter-item:hover{transform:rotate(0deg) scale(1.05);z-index:30 !important;box-shadow:0 26px 54px rgba(0,0,0,.4)}
+.scatter-item figure{width:clamp(190px,20vw,290px);aspect-ratio:4/3;overflow:hidden}
+.scatter-item figcaption{display:block;text-align:center;margin-top:.5rem;font-size:.82rem}
+
+.frame-madrid{background:#efe3d2;padding:.6rem .6rem 2.1rem;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.frame-madrid figcaption{font-family:'DM Serif Display',serif;font-style:italic;color:#3a2415}
+
+.frame-barcelona{background:#fff;padding:.6rem .6rem 2.1rem;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.frame-barcelona figcaption{font-family:'DM Serif Display',serif;font-style:italic;color:#2a2420}
+
+.frame-london{background:#1b2127;padding:.5rem;box-shadow:0 18px 40px rgba(0,0,0,.45);border:1px solid rgba(246,244,239,.22)}
+.frame-london figcaption{color:#f6f4ef;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-top:.5rem}
+
+/* city nav */
+.cities-nav{
+  position:absolute;left:0;right:0;bottom:1.4rem;z-index:5;
+  display:flex;align-items:center;justify-content:center;gap:1.4rem;
+}
+.city-arrow{
+  width:40px;height:40px;border-radius:50%;border:1px solid rgba(246,244,239,.4);
+  background:rgba(0,0,0,.25);backdrop-filter:blur(4px);color:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background .3s ease;
+}
+.city-arrow:hover{background:rgba(255,255,255,.18)}
+.city-dots{display:flex;gap:.55rem}
+.city-dots button{width:7px;height:7px;border-radius:50%;background:rgba(246,244,239,.35);border:0;cursor:pointer;transition:background .3s ease,transform .3s ease}
+.city-dots button.active{background:#fff;transform:scale(1.3)}
+
+.swipe-hint{
+  position:absolute;top:5.6rem;right:clamp(1.2rem,4vw,3rem);z-index:5;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.65;
+  display:flex;align-items:center;gap:.5rem;transition:opacity .5s ease;
+}
+.swipe-hint.hide{opacity:0}
+
+/* ---------- contact ---------- */
+.contact{padding:clamp(5rem,10vw,8rem) clamp(1.2rem,4vw,2.6rem);text-align:center;background:var(--ink)}
+.contact h2{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,7vw,5rem);margin:1rem 0 2rem;line-height:1.05}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.contact-links{display:flex;flex-direction:column;gap:.5rem;align-items:center}
+.contact-links a{font-size:clamp(1.1rem,2.4vw,1.4rem);position:relative}
+.contact-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.contact-links a:hover::after{transform:scaleX(1)}
+.contact-note{margin-top:2rem;font-size:.78rem;color:rgba(246,244,239,.55);max-width:40ch;margin-inline:auto;line-height:1.7}
+
+/* ---------- footer ---------- */
+footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.8rem clamp(1.2rem,4vw,2.6rem);border-top:1px solid var(--line);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(246,244,239,.55)}
+footer a{color:rgba(246,244,239,.8)}
+footer .socials{display:flex;gap:1.2rem}
+
+/* ---------- mobile nav drawer ---------- */
+.nav-drawer{position:fixed;inset:0;background:var(--ink);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;transform:translateY(-100%);transition:transform .5s var(--ease)}
+.nav-drawer.open{transform:translateY(0)}
+.nav-drawer a{font-family:'DM Serif Display',serif;font-style:italic;font-size:2rem;color:#fff}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .interlude-grid{flex-direction:column;height:auto}
+  .interlude-left{width:100%;flex-direction:row}
+  .interlude-left .eye-shot{flex:0 0 46%;aspect-ratio:3/2}
+  .interlude-left .tall-shot{flex:1;aspect-ratio:3/4}
+  .interlude-right{height:280px}
+  .scatter-item figure{width:clamp(150px,34vw,210px)}
+}
+@media (max-width:680px){
+  nav.primary-nav{display:none}
+  .menu-btn{display:block}
+  .fan-card{width:92px}
+  .fan-card{transform:translate(72vw,4vw) rotate(14deg) scale(.8)}
+  .swipe-hint{top:auto;bottom:4.2rem;right:50%;transform:translateX(50%)}
+  .interlude-left{flex-direction:column}
+  .interlude-left .eye-shot{flex:0 0 120px;aspect-ratio:auto}
+  .interlude-left .tall-shot{aspect-ratio:3/4}
+  .interlude-right{height:240px}
+}

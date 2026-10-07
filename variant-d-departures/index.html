@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebrar — Departures</title>
+<meta name="description" content="Ebrar — model portfolio across three cities. Placeholder content, photos to be replaced.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader"><span>Ebrar</span></div>
+
+<header>
+  <a href="#top" class="logo">Ebrar</a>
+  <nav class="primary-nav">
+    <a href="#cities">Cities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn">Menu</button>
+</header>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="#cities">Cities</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="top">
+
+  <section class="fan-hero" id="fanHero">
+    <div class="fan-stage">
+      <div class="fan-card" style="--x:-32vw;--y:3vw;--r:-16deg;--d:.05s"><img src="assets/fan-01.jpg" alt="Portrait, placeholder"></div>
+      <div class="fan-card" style="--x:-16vw;--y:-2.5vw;--r:-8deg;--d:.14s"><img src="assets/fan-02.jpg" alt="Portrait, placeholder"></div>
+      <div class="fan-card" style="--x:0vw;--y:-5vw;--r:0deg;--d:.23s"><img src="assets/fan-03.jpg" alt="Portrait, placeholder"></div>
+      <div class="fan-card" style="--x:16vw;--y:-2.5vw;--r:8deg;--d:.32s"><img src="assets/fan-04.jpg" alt="Portrait, placeholder"></div>
+      <div class="fan-card" style="--x:32vw;--y:3vw;--r:16deg;--d:.41s"><img src="assets/fan-05.jpg" alt="Portrait, placeholder"></div>
+    </div>
+    <div class="fan-text">
+      <div class="eyebrow">Portfolio — Departures</div>
+      <h1 class="fan-title">Ebrar</h1>
+      <p class="fan-sub">Placeholder structure — a set of portraits, then three cities: Madrid, Barcelona, London.</p>
+    </div>
+    <div class="scroll-cue"><div class="line"></div><span>Scroll</span></div>
+  </section>
+
+  <section class="interlude reveal">
+    <div class="interlude-grid">
+      <div class="interlude-left">
+        <figure class="eye-shot"><img src="assets/interlude-eye-macro.jpg" alt="Eye close-up, placeholder" style="object-position:50% 48%"></figure>
+        <figure class="tall-shot"><img src="assets/interlude-02.jpg" alt="Street portrait, placeholder"></figure>
+      </div>
+      <figure class="interlude-right"><img src="assets/interlude-eye.jpg" alt="Portrait, placeholder"></figure>
+    </div>
+    <div class="interlude-note">
+      <p>"Somewhere between a studio and a street corner — placeholder line, to be replaced."</p>
+    </div>
+  </section>
+
+  <section class="cities" id="cities" data-active="0">
+    <span class="swipe-hint" id="swipeHint">Scroll or swipe →</span>
+    <div class="cities-track" id="citiesTrack">
+
+      <article class="city city-madrid">
+        <div class="city-bg"><img src="assets/city-madrid-bg.jpg" alt="Madrid, placeholder city photo"></div>
+        <div class="city-overlay"></div>
+        <div class="city-head">
+          <span class="idx">01 / 03</span>
+          <h2>Madrid</h2>
+          <p>Placeholder location note — warm light, placeholder street/studio mix for this city.</p>
+        </div>
+        <div class="scatter-field" data-scatter data-slots='[{"t":"4%","l":"2%"},{"t":"34%","l":"23%"},{"t":"0%","l":"45%"},{"t":"30%","l":"67%"}]'>
+          <div class="scatter-item frame-madrid"><figure><img src="assets/madrid-01.jpg" alt="Madrid portrait, placeholder"></figure><figcaption>Madrid — 01</figcaption></div>
+          <div class="scatter-item frame-madrid"><figure><img src="assets/madrid-02.jpg" alt="Madrid portrait, placeholder"></figure><figcaption>Madrid — 02</figcaption></div>
+          <div class="scatter-item frame-madrid"><figure><img src="assets/madrid-03.jpg" alt="Madrid portrait, placeholder" style="object-position:50% 18%"></figure><figcaption>Madrid — 03</figcaption></div>
+          <div class="scatter-item frame-madrid"><figure><img src="assets/madrid-04.jpg" alt="Madrid portrait, placeholder"></figure><figcaption>Madrid — 04</figcaption></div>
+        </div>
+      </article>
+
+      <article class="city city-barcelona">
+        <div class="city-bg"><img src="assets/city-barcelona-bg.jpg" alt="Barcelona, placeholder city photo"></div>
+        <div class="city-overlay"></div>
+        <div class="city-head">
+          <span class="idx">02 / 03</span>
+          <h2>Barcelona</h2>
+          <p>Placeholder location note — the "album" chapter, loose polaroid-style frames.</p>
+        </div>
+        <div class="scatter-field" data-scatter data-slots='[{"t":"4%","l":"2%"},{"t":"32%","l":"21%"},{"t":"0%","l":"43%"},{"t":"30%","l":"64%"},{"t":"8%","l":"82%"}]'>
+          <div class="scatter-item frame-barcelona"><figure><img src="assets/barcelona-01.jpg" alt="Barcelona portrait, placeholder" style="object-position:50% 25%"></figure><figcaption>Barcelona — 01</figcaption></div>
+          <div class="scatter-item frame-barcelona"><figure><img src="assets/barcelona-02.jpg" alt="Barcelona portrait, placeholder" style="object-position:50% 15%"></figure><figcaption>Barcelona — 02</figcaption></div>
+          <div class="scatter-item frame-barcelona"><figure><img src="assets/barcelona-03.jpg" alt="Barcelona portrait, placeholder" style="object-position:50% 20%"></figure><figcaption>Barcelona — 03</figcaption></div>
+          <div class="scatter-item frame-barcelona"><figure><img src="assets/barcelona-04.jpg" alt="Barcelona portrait, placeholder" style="object-position:50% 22%"></figure><figcaption>Barcelona — 04</figcaption></div>
+          <div class="scatter-item frame-barcelona"><figure><img src="assets/barcelona-05.jpg" alt="Barcelona portrait, placeholder" style="object-position:50% 30%"></figure><figcaption>Barcelona — 05</figcaption></div>
+        </div>
+      </article>
+
+      <article class="city city-london">
+        <div class="city-bg"><img src="assets/city-london-bg.jpg" alt="London, placeholder city photo"></div>
+        <div class="city-overlay"></div>
+        <div class="city-head">
+          <span class="idx">03 / 03</span>
+          <h2>London</h2>
+          <p>Placeholder location note — cooler tone, thin-framed grid for this city.</p>
+        </div>
+        <div class="scatter-field" data-scatter data-slots='[{"t":"4%","l":"2%"},{"t":"34%","l":"23%"},{"t":"0%","l":"45%"},{"t":"30%","l":"67%"}]'>
+          <div class="scatter-item frame-london"><figure><img src="assets/london-01.jpg" alt="London portrait, placeholder" style="object-position:50% 14%"></figure><figcaption>London — 01</figcaption></div>
+          <div class="scatter-item frame-london"><figure><img src="assets/london-02.jpg" alt="London portrait, placeholder"></figure><figcaption>London — 02</figcaption></div>
+          <div class="scatter-item frame-london"><figure><img src="assets/london-03.jpg" alt="London street atmosphere, placeholder"></figure><figcaption>London — 03</figcaption></div>
+          <div class="scatter-item frame-london"><figure><img src="assets/london-04.jpg" alt="London portrait, placeholder" style="object-position:55% 25%"></figure><figcaption>London — 04</figcaption></div>
+        </div>
+      </article>
+
+    </div>
+    <div class="cities-nav">
+      <button class="city-arrow" id="cityPrev" aria-label="Previous city">←</button>
+      <div class="city-dots" id="cityDots">
+        <button data-idx="0" class="active" aria-label="Madrid"></button>
+        <button data-idx="1" aria-label="Barcelona"></button>
+        <button data-idx="2" aria-label="London"></button>
+      </div>
+      <button class="city-arrow" id="cityNext" aria-label="Next city">→</button>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <span class="eyebrow reveal">Contact</span>
+    <h2 class="reveal">Next stop,<br><em>your city?</em></h2>
+    <div class="contact-links reveal">
+      <a href="mailto:booking@ebrar-model.com">booking@ebrar-model.com</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener">@ebrar — Instagram</a>
+    </div>
+    <p class="contact-note">Placeholder contact details — replace with a real email and Instagram handle.</p>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 Ebrar. Portfolio draft — not for distribution.</span>
+  <div class="socials">
+    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:booking@ebrar-model.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
