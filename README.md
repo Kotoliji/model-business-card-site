@@ -1,5 +1,7 @@
 # Model Portfolio / Business Card Website — 4 Design Drafts
 
+**Live demo: https://kotoliji.github.io/model-business-card-site/** — opens the switcher page; pick any of the four variants from there. Deployed automatically from `master` via GitHub Pages on every push.
+
 A one-page "business card" portfolio website template for models — built as four independent visual directions to compare side by side before picking (or merging) one. Not tied to any real person: the demo content uses a placeholder name ("Anastasia") and stock photos so the layouts can be judged on their own, and the whole thing is meant to be re-skinned with real content for whoever actually uses it.
 
 **Nothing here is final** — photos, name, bio, measurements and contact details are all placeholders, clearly marked as such in the markup and on the pages themselves.
