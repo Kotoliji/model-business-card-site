@@ -1,7 +1,7 @@
 # Status — 2026-10-06
 
 ## What this is
-Four working draft directions for Ebrar's one-page model portfolio. Static HTML/CSS/JS, no build step, no backend. All photos are Unsplash placeholders (stored locally in each variant's `assets/` folder, not hotlinked) and all text (name use, bio, measurements, contact info, agency, city names) is placeholder — none of it is real.
+Four working draft directions for Anastasia's one-page model portfolio. Static HTML/CSS/JS, no build step, no backend. All photos are Unsplash placeholders (stored locally in each variant's `assets/` folder, not hotlinked) and all text (name use, bio, measurements, contact info, agency, city names) is placeholder — none of it is real.
 
 ## Structure
 - `index.html` — landing page comparing all four variants, open this first.

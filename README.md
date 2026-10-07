@@ -1,4 +1,4 @@
-# Ebrar — Model Portfolio (Design Drafts)
+# Anastasia — Model Portfolio (Design Drafts)
 
 A one-page model portfolio site, built as four independent visual directions to compare side by side before picking (or merging) one. **Nothing here is final** — photos, name usage, bio, measurements and contact details are all placeholders, clearly marked as such in the markup and on the pages themselves.
 
@@ -18,7 +18,7 @@ Open [`index.html`](index.html) — it's a small switcher page linking to all fo
 ## Project structure
 
 ```
-Ebrar_model_site/
+.
 ├── index.html                  — switcher/landing page linking to all four variants
 ├── variant-a-editorial/
 │   ├── index.html, style.css, script.js
